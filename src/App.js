@@ -5,15 +5,17 @@ export default function App() {
   return (
     <div className="App">
       <h1>Weather App</h1>
+      <footer>
+        Coded by Datali-Dew and its {""}
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          className="GitHub-link"
+          href="https://github.com/Datdew/react-weather-app"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          open-sourced on GitHub
         </a>
-      
+      </footer>
     </div>
   );
 }

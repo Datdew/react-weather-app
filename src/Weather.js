@@ -11,7 +11,7 @@ export default function Weather(props) {
       loaded: true,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
-      date:"Wednesday 07:00",
+      date: new Date(response.data.dt * 1000),
       humidity: response.data.main.humidity,
       icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
@@ -43,7 +43,7 @@ export default function Weather(props) {
           </form>
           <h1>{weatherData.city}</h1>
           <ul>
-            <li>{weatherData.date}</li>
+            <li> <formattedDate date={weatherData.date}/> </li>
             <li className="text-capitalize">{weatherData.description}</li>
           </ul>
           <div className="row mt-3">
